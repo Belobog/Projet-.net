@@ -14,7 +14,12 @@
                 language: "fr"
             });
 </script>
-<textarea name="content" cols="50" rows="15">Créer votre document</textarea>&nbsp;
+<style type="text/css">
+.formulaire {
+width: 100%;
+}
+</style>
+<textarea name="content" class="formulaire" rows="40">Créer votre document</textarea>&nbsp;
     <br />
     <br />
     <asp:Button ID="Button1" runat="server" Text="Enregister" />
