@@ -22,7 +22,7 @@
                         <ContentTemplate>
                             <ul>
                                 <li>[ <a href="~/Data/CreateDoc.aspx" ID="l3" runat="server">Créer un document</a> ]</li>
-                                <li>[ <a href="~/Account/ModifyDoc.aspx" ID="l4" runat="server">Modifier un document</a> ]</li>
+                                <li>[ <a href="~/Data/ModifyDoc.aspx" ID="l4" runat="server">Modifier un document</a> ]</li>
                             </ul>
                         </ContentTemplate>
                     </asp:RoleGroup>
