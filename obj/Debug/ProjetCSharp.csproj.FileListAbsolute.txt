@@ -1,0 +1,5 @@
+d:\donnees\u9100518\visual studio 2010\Projects\ProjetCSharp\ProjetCSharp\bin\ProjetCSharp.dll
+d:\donnees\u9100518\visual studio 2010\Projects\ProjetCSharp\ProjetCSharp\bin\ProjetCSharp.pdb
+d:\donnees\u9100518\visual studio 2010\Projects\ProjetCSharp\ProjetCSharp\obj\Debug\ResolveAssemblyReference.cache
+d:\donnees\u9100518\visual studio 2010\Projects\ProjetCSharp\ProjetCSharp\obj\Debug\ProjetCSharp.dll
+d:\donnees\u9100518\visual studio 2010\Projects\ProjetCSharp\ProjetCSharp\obj\Debug\ProjetCSharp.pdb
