@@ -59,12 +59,14 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Scripts\langs\en.js" />
+    <Content Include="Scripts\langs\fr.js" />
     <Content Include="Scripts\license.txt" />
     <Content Include="Scripts\plugins\advhr\css\advhr.css" />
     <Content Include="Scripts\plugins\advhr\editor_plugin.js" />
     <Content Include="Scripts\plugins\advhr\editor_plugin_src.js" />
     <Content Include="Scripts\plugins\advhr\js\rule.js" />
     <Content Include="Scripts\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\advhr\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\advhr\rule.htm" />
     <Content Include="Scripts\plugins\advimage\css\advimage.css" />
     <Content Include="Scripts\plugins\advimage\editor_plugin.js" />
@@ -73,11 +75,13 @@
     <Content Include="Scripts\plugins\advimage\img\sample.gif" />
     <Content Include="Scripts\plugins\advimage\js\image.js" />
     <Content Include="Scripts\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\advimage\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\advlink\css\advlink.css" />
     <Content Include="Scripts\plugins\advlink\editor_plugin.js" />
     <Content Include="Scripts\plugins\advlink\editor_plugin_src.js" />
     <Content Include="Scripts\plugins\advlink\js\advlink.js" />
     <Content Include="Scripts\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\advlink\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\advlink\link.htm" />
     <Content Include="Scripts\plugins\advlist\editor_plugin.js" />
     <Content Include="Scripts\plugins\advlist\editor_plugin_src.js" />
@@ -114,6 +118,7 @@
     <Content Include="Scripts\plugins\emotions\img\smiley-yell.gif" />
     <Content Include="Scripts\plugins\emotions\js\emotions.js" />
     <Content Include="Scripts\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\emotions\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\example\dialog.htm" />
     <Content Include="Scripts\plugins\example\editor_plugin.js" />
     <Content Include="Scripts\plugins\example\editor_plugin_src.js" />
@@ -129,6 +134,7 @@
     <Content Include="Scripts\plugins\fullpage\fullpage.htm" />
     <Content Include="Scripts\plugins\fullpage\js\fullpage.js" />
     <Content Include="Scripts\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\fullpage\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\fullscreen\editor_plugin.js" />
     <Content Include="Scripts\plugins\fullscreen\editor_plugin_src.js" />
     <Content Include="Scripts\plugins\fullscreen\fullscreen.htm" />
@@ -159,6 +165,7 @@
     <Content Include="Scripts\plugins\media\js\embed.js" />
     <Content Include="Scripts\plugins\media\js\media.js" />
     <Content Include="Scripts\plugins\media\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\media\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\media\media.htm" />
     <Content Include="Scripts\plugins\media\moxieplayer.swf" />
     <Content Include="Scripts\plugins\nonbreaking\editor_plugin.js" />
@@ -172,6 +179,7 @@
     <Content Include="Scripts\plugins\paste\js\pastetext.js" />
     <Content Include="Scripts\plugins\paste\js\pasteword.js" />
     <Content Include="Scripts\plugins\paste\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\paste\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\paste\pastetext.htm" />
     <Content Include="Scripts\plugins\paste\pasteword.htm" />
     <Content Include="Scripts\plugins\preview\editor_plugin.js" />
@@ -188,6 +196,7 @@
     <Content Include="Scripts\plugins\searchreplace\editor_plugin_src.js" />
     <Content Include="Scripts\plugins\searchreplace\js\searchreplace.js" />
     <Content Include="Scripts\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\searchreplace\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\searchreplace\searchreplace.htm" />
     <Content Include="Scripts\plugins\spellchecker\css\content.css" />
     <Content Include="Scripts\plugins\spellchecker\editor_plugin.js" />
@@ -198,6 +207,7 @@
     <Content Include="Scripts\plugins\style\editor_plugin_src.js" />
     <Content Include="Scripts\plugins\style\js\props.js" />
     <Content Include="Scripts\plugins\style\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\style\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\style\props.htm" />
     <Content Include="Scripts\plugins\style\readme.txt" />
     <Content Include="Scripts\plugins\tabfocus\editor_plugin.js" />
@@ -213,6 +223,7 @@
     <Content Include="Scripts\plugins\table\js\row.js" />
     <Content Include="Scripts\plugins\table\js\table.js" />
     <Content Include="Scripts\plugins\table\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\table\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\table\merge_cells.htm" />
     <Content Include="Scripts\plugins\table\row.htm" />
     <Content Include="Scripts\plugins\table\table.htm" />
@@ -222,6 +233,7 @@
     <Content Include="Scripts\plugins\template\editor_plugin_src.js" />
     <Content Include="Scripts\plugins\template\js\template.js" />
     <Content Include="Scripts\plugins\template\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\template\langs\fr_dlg.js" />
     <Content Include="Scripts\plugins\template\template.htm" />
     <Content Include="Scripts\plugins\visualblocks\css\visualblocks.css" />
     <Content Include="Scripts\plugins\visualblocks\editor_plugin.js" />
@@ -248,6 +260,7 @@
     <Content Include="Scripts\plugins\xhtmlxtras\js\element_common.js" />
     <Content Include="Scripts\plugins\xhtmlxtras\js\ins.js" />
     <Content Include="Scripts\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\xhtmlxtras\langs\fr_dlg.js" />
     <Content Include="Scripts\themes\advanced\about.htm" />
     <Content Include="Scripts\themes\advanced\anchor.htm" />
     <Content Include="Scripts\themes\advanced\charmap.htm" />
@@ -275,6 +288,8 @@
     <Content Include="Scripts\themes\advanced\js\source_editor.js" />
     <Content Include="Scripts\themes\advanced\langs\en.js" />
     <Content Include="Scripts\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Scripts\themes\advanced\langs\fr.js" />
+    <Content Include="Scripts\themes\advanced\langs\fr_dlg.js" />
     <Content Include="Scripts\themes\advanced\link.htm" />
     <Content Include="Scripts\themes\advanced\shortcuts.htm" />
     <Content Include="Scripts\themes\advanced\skins\default\content.css" />
@@ -302,6 +317,7 @@
     <Content Include="Scripts\themes\simple\editor_template_src.js" />
     <Content Include="Scripts\themes\simple\img\icons.gif" />
     <Content Include="Scripts\themes\simple\langs\en.js" />
+    <Content Include="Scripts\themes\simple\langs\fr.js" />
     <Content Include="Scripts\themes\simple\skins\default\content.css" />
     <Content Include="Scripts\themes\simple\skins\default\ui.css" />
     <Content Include="Scripts\themes\simple\skins\o2k7\content.css" />

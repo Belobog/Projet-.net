@@ -10,7 +10,8 @@
         <script type="text/javascript" src="../Scripts/tiny_mce.js"></script>
         <script type="text/javascript">
             tinyMCE.init({
-                mode: "textareas"
+                mode: "textareas",
+                language: "fr"
             });
 </script>
 <textarea name="content" cols="50" rows="15">Créer votre document</textarea>&nbsp;
