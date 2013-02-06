@@ -7,7 +7,7 @@
     <h2>
         Accueil</h2>
     <p>
-        Bienvenue sur l&#39;application de gestion documentaire <asp:LoginName ID="login" runat="server" /> !</p>
+        Bienvenue sur l&#39;application de gestion documentaire <asp:LoginName ID="login" runat="server" /> !!!!</p>
  <asp:LoginView id="LoginView1" runat="server">
                 <RoleGroups>
                     <asp:RoleGroup Roles="Eleve">
