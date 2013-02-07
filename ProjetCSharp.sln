@@ -1,7 +1,19 @@
 ﻿
+<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Web Developer Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetCSharp", "ProjetCSharp.csproj", "{1F3A28E7-C34C-405A-8B6D-B8B3855F5F1F}"
+=======
+<<<<<<< HEAD
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetCSharp", "ProjetCSharp\ProjetCSharp.csproj", "{1F3A28E7-C34C-405A-8B6D-B8B3855F5F1F}"
+=======
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetCSharp", "ProjetCSharp.csproj", "{1F3A28E7-C34C-405A-8B6D-B8B3855F5F1F}"
+>>>>>>> 1906efa18960debab321d7901aa9430bd97dea2b
+>>>>>>> 5cc96146ad7fa12c4491d8be71df2cbbb976b027
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
