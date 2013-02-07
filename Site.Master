@@ -30,13 +30,44 @@
                 </asp:LoginView>
             </div>
             <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
+                            <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Accueil"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="À propos de"/>
+                       </Items>
+                         </asp:Menu>
+                    </AnonymousTemplate>
+                     <RoleGroups>
+                    <asp:RoleGroup Roles="Eleve">
+                        <ContentTemplate>
+                        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Accueil"/>
 
+                        <asp:MenuItem  Text="Mes commentaires" Value="Mes commentaires"></asp:MenuItem>
+
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="À propos de"/>
-                    </Items>
-                </asp:Menu>
+                       </Items>
+                         </asp:Menu>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                     <asp:RoleGroup Roles="Professeur">
+                        <ContentTemplate>
+                        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Accueil"/>
+
+                        <asp:MenuItem  Text="Mes documents" Value="Mes documents"></asp:MenuItem>
+
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="À propos de"/>
+                       </Items>
+                         </asp:Menu>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                    </RoleGroups>
+                </asp:LoginView>
             </div>
         </div>
         <div class="main">
