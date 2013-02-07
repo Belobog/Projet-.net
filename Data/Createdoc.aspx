@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Création de commentaire" Language="C#" AutoEventWireup="true" CodeBehind="Createdoc.aspx.cs" Inherits="ProjetCSharp.Account.Createdoc" MasterPageFile="~/Site.master"%>
+﻿<%@ Page Title="Création de commentaire" Language="C#" AutoEventWireup="true" CodeBehind="Createdoc.aspx.cs" Inherits="ProjetCSharp.Account.Createdoc" MasterPageFile="~/Site.master" ValidateRequest="false"%>
+
 
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
@@ -8,20 +9,26 @@
     <h2>Création de document</h2>
 
         <script type="text/javascript" src="../Scripts/tiny_mce.js"></script>
-        <script type="text/javascript">
+        <script language="javascript" type="text/javascript">
             tinyMCE.init({
                 mode: "textareas",
+                theme: "advanced",
                 language: "fr"
             });
 </script>
+
+        <asp:TextBox ID="MyTextBox" runat="server" Rows="42" TextMode="MultiLine" Height="267px" CssClass="formulaire"></asp:TextBox>
+
 <style type="text/css">
 .formulaire {
 width: 100%;
 }
 </style>
-<textarea name="content" class="formulaire" rows="40">Créer votre document</textarea>&nbsp;
+
     <br />
+    <asp:Button ID="Button1" runat="server" onclick="Button1_Click"
+        Text="Télécharger" />
     <br />
-    <asp:Button ID="Button1" runat="server" Text="Enregister" />
+
 
 </asp:Content>
