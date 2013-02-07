@@ -7,6 +7,9 @@
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
     <h2>Création de document</h2>
+    <p>&nbsp;&nbsp;Nom du document :&nbsp;
+        <asp:TextBox ID="TextBox1" runat="server" ToolTip="Nom du document"></asp:TextBox>
+    </p>
 
         <script type="text/javascript" src="../Scripts/tiny_mce.js"></script>
         <script language="javascript" type="text/javascript">
@@ -28,6 +31,8 @@ width: 100%;
     <br />
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click"
         Text="Télécharger" />
+    <asp:Button ID="Button2" runat="server" onclick="Button2_Click" 
+        Text="Enregistrer" />
     <br />
 
 
