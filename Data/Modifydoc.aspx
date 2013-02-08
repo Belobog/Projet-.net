@@ -6,6 +6,21 @@
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
     <h2>Modification de document</h2>
+    <p>
+        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+            <ItemTemplate>
+                DocumentName:
+                <asp:Label ID="DocumentNameLabel" runat="server" 
+                    Text='<%# Eval("DocumentName") %>' />
+                <br />
+<br />
+            </ItemTemplate>
+        </asp:DataList>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+            SelectCommand="SELECT aspnet_Document.DocumentName FROM aspnet_Document CROSS JOIN aspnet_DocumentInUsers CROSS JOIN aspnet_Users WHERE (aspnet_Users.UserName = N'Victor')">
+        </asp:SqlDataSource>
+    </p>
 
         
 </asp:Content>

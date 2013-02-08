@@ -60,6 +60,7 @@
     <Content Include="About.aspx" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Data\Modifycom.aspx" />
     <Content Include="Data\Createdoc.aspx" />
     <Content Include="Data\Createcom.aspx" />
     <Content Include="Account\Login.aspx" />
@@ -373,6 +374,13 @@
     <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
       <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Data\Modifycom.aspx.cs">
+      <DependentUpon>Modifycom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Data\Modifycom.aspx.designer.cs">
+      <DependentUpon>Modifycom.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Data\Createdoc.aspx.cs">
       <DependentUpon>Createdoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -435,6 +443,9 @@
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

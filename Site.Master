@@ -46,7 +46,7 @@
                         <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Accueil"/>
 
-                        <asp:MenuItem  Text="Mes commentaires" Value="Mes commentaires"></asp:MenuItem>
+                        <asp:MenuItem  Text="Mes commentaires" NavigateUrl="~/Data/Modifycom.aspx"></asp:MenuItem>
 
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="À propos de"/>
                        </Items>
@@ -59,7 +59,7 @@
                         <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Accueil"/>
 
-                        <asp:MenuItem  Text="Mes documents" Value="Mes documents"></asp:MenuItem>
+                        <asp:MenuItem  Text="Mes documents" NavigateUrl="~/Data/Modifydoc.aspx"></asp:MenuItem>
 
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="À propos de"/>
                        </Items>
