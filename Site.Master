@@ -66,6 +66,20 @@
                          </asp:Menu>
                         </ContentTemplate>
                     </asp:RoleGroup>
+                         <asp:RoleGroup Roles="Admin">
+                        <ContentTemplate>
+                        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Accueil"/>
+
+                        <asp:MenuItem  Text="Mes documents" NavigateUrl="~/Data/Modifydoc.aspx"></asp:MenuItem>
+                        <asp:MenuItem  Text="Mes commentaires" NavigateUrl="~/Data/Modifycom.aspx"></asp:MenuItem>
+
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="À propos de"/>
+                       </Items>
+                         </asp:Menu>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
                     </RoleGroups>
                 </asp:LoginView>
             </div>

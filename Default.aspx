@@ -26,6 +26,17 @@
                             </ul>
                         </ContentTemplate>
                     </asp:RoleGroup>
+                    <asp:RoleGroup Roles="Admin">
+                        <ContentTemplate>
+                            <ul>
+                                <li>[ <a href="~/Data/Createcom.aspx" ID="l1" runat="server">Créer un commentaire</a> ]</li>
+                                <li>[ <a href="~/Data/Modifycom.aspx" ID="l2" runat="server">Modifier un commentaire</a> ]</li>
+                                <li>[ <a href="~/Data/CreateDoc.aspx" ID="l3" runat="server">Créer un document</a> ]</li>
+                                <li>[ <a href="~/Data/ModifyDoc.aspx" ID="l4" runat="server">Modifier un document</a> ]</li>
+                                <li>[ <a href="~/Data/AdminUsers.aspx" ID="l5" runat="server">Utilisateurs</a> ]</li>
+                            </ul>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
                 </RoleGroups>
             </asp:LoginView>
 </asp:Content>

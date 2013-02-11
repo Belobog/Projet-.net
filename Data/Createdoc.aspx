@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Création de commentaire" Language="C#" AutoEventWireup="true" CodeBehind="Createdoc.aspx.cs" Inherits="ProjetCSharp.Account.Createdoc" MasterPageFile="~/Site.master" ValidateRequest="false"%>
+﻿<%@ Page Title="Création de documents" Language="C#" AutoEventWireup="true" CodeBehind="Createdoc.aspx.cs" Inherits="ProjetCSharp.Account.Createdoc" MasterPageFile="~/Site.master" ValidateRequest="false"%>
 
 
 
