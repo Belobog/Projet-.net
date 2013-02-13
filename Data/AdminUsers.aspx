@@ -10,9 +10,11 @@
      <h2>Utilisateurs<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource1" GridLines="Vertical" Width="903px">
          <AlternatingRowStyle BackColor="#DCDCDC" />
          <Columns>
-             <asp:BoundField DataField="UserId" HeaderText="UserId" SortExpression="UserId" />
-             <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
-             <asp:BoundField DataField="LastActivityDate" HeaderText="LastActivityDate" SortExpression="LastActivityDate" />
+             <asp:BoundField DataField="UserName" HeaderText="Login" SortExpression="UserName" />
+             <asp:BoundField DataField="RoleName" HeaderText="Role" SortExpression="RoleName" />
+             <asp:BoundField DataField="LastActivityDate" HeaderText="Derniere connexion" SortExpression="LastActivityDate" />
+             <asp:ButtonField ButtonType="Image" HeaderText="Modifier"  ImageUrl="~/Images/validation.jpg" />
+             <asp:ButtonField ButtonType="Image" HeaderText="Supprimer" ImageUrl="~/Images/supression.jpg" />
          </Columns>
          <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
          <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -28,7 +30,10 @@
              ID="SqlDataSource1" 
              runat="server"
              ConnectionString="<%$ ConnectionStrings:ConnectionString %>"  
-             SelectCommand="SELECT aspnet_Users.UserId,aspnet_Users.UserName, aspnet_Users.LastActivityDate FROM aspnet_Users">
+             SelectCommand="SELECT aspnet_Users.UserName, aspnet_Roles.RoleName, aspnet_Users.LastActivityDate 
+             FROM aspnet_Users,aspnet_Roles,aspnet_UsersInRoles
+             WHERE aspnet_Users.UserId = aspnet_UsersInRoles.UserId
+             AND aspnet_Roles.RoleId = aspnet_UsersInRoles.RoleId ">
              
 
          </asp:SqlDataSource>

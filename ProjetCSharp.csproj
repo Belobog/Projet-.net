@@ -449,6 +449,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images2\" />
+    <Folder Include="Images\" />
     <Folder Include="Scripts\plugins\spellchecker\classes\utils\" />
     <Folder Include="Scripts\plugins\spellchecker\includes\" />
   </ItemGroup>
