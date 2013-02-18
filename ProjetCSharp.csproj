@@ -64,6 +64,7 @@
     <Content Include="About.aspx" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Data\Admin.aspx" />
     <Content Include="Data\AdminUsers.aspx" />
     <Content Include="Data\Modifycom.aspx" />
     <Content Include="Data\Createdoc.aspx" />
@@ -378,6 +379,13 @@
     </Compile>
     <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
       <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Data\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Data\AdminUsers.aspx.cs">
       <DependentUpon>AdminUsers.aspx</DependentUpon>

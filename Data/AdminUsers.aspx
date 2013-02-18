@@ -33,7 +33,10 @@
              SelectCommand="SELECT aspnet_Users.UserName, aspnet_Roles.RoleName, aspnet_Users.LastActivityDate 
              FROM aspnet_Users,aspnet_Roles,aspnet_UsersInRoles
              WHERE aspnet_Users.UserId = aspnet_UsersInRoles.UserId
-             AND aspnet_Roles.RoleId = aspnet_UsersInRoles.RoleId ">
+             AND aspnet_Roles.RoleId = aspnet_UsersInRoles.RoleId "
+             >
+
+
              
 
          </asp:SqlDataSource>
