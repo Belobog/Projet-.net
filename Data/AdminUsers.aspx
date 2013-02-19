@@ -34,6 +34,9 @@
              FROM aspnet_Users,aspnet_Roles,aspnet_UsersInRoles
              WHERE aspnet_Users.UserId = aspnet_UsersInRoles.UserId
              AND aspnet_Roles.RoleId = aspnet_UsersInRoles.RoleId "
+             UpdateCommand=""
+             DeleteCommand=""
+             InsertCommand=""
              >
 
 
