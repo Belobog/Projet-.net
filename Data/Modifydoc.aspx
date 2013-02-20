@@ -7,19 +7,19 @@
 
     <h2>Modification de document</h2>
     <p>
-        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" OnDeleteCommand="DataList1_DeleteCommand">
             <ItemTemplate>
-                DocumentName:
                 <asp:Label ID="DocumentNameLabel" runat="server" 
                     Text='<%# Eval("DocumentName") %>' />
                 <br />
 <br />
+                <asp:Button ID="buttondelete" runat="server" CommandName="delete" Text="Supprimer" />
             </ItemTemplate>
         </asp:DataList>
 
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
-            SelectCommand="SELECT distinct aspnet_Document.DocumentName FROM aspnet_Document CROSS JOIN aspnet_DocumentInUsers CROSS JOIN aspnet_Users WHERE (aspnet_Users.UserName = @username)">
+            SelectCommand="SELECT aspnet_Document.DocumentName FROM aspnet_Document,aspnet_DocumentInUsers,aspnet_Users WHERE (aspnet_Users.UserName = @username)AND (aspnet_Users.UserId = aspnet_DocumentInUsers.UsersId)AND (aspnet_DocumentInUsers.DocumentId=aspnet_Document.DocumentId)">
                             <SelectParameters>
                                 <asp:Parameter Name="username" Type="String" DefaultValue="Anonymous" />
                             </SelectParameters> 
