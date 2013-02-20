@@ -1,0 +1,1 @@
+﻿INSERT INTO vw_aspnet_DocumentInUsers(DocumentId, UsersId) VALUES((SELECT DocumentID FROM vw_aspnet_Document WHERE vw_aspnet_Document.DocumentName='Memoire'), (SELECT UserId FROM vw_aspnet_Users WHERE vw_aspnet_Users.UserName='Victor'))

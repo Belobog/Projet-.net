@@ -16,10 +16,15 @@
 <br />
             </ItemTemplate>
         </asp:DataList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-            SelectCommand="SELECT aspnet_Document.DocumentName FROM aspnet_Document CROSS JOIN aspnet_DocumentInUsers CROSS JOIN aspnet_Users WHERE (aspnet_Users.UserName = N'Victor')">
-        </asp:SqlDataSource>
+
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:ApplicationServices %>" 
+            SelectCommand="SELECT distinct aspnet_Document.DocumentName FROM aspnet_Document CROSS JOIN aspnet_DocumentInUsers CROSS JOIN aspnet_Users WHERE (aspnet_Users.UserName = @username)">
+                            <SelectParameters>
+                                <asp:Parameter Name="username" Type="String" DefaultValue="Anonymous" />
+                            </SelectParameters> 
+                        </asp:SqlDataSource>
+        
     </p>
 
         

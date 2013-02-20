@@ -48,9 +48,12 @@ namespace ProjetCSharp.Account
                 monStreamWriter.Write(MyTextBox.Text);
                 monStreamWriter.Close();
                 ClientScript.RegisterStartupScript(this.GetType(), "newWindow", String.Format("<script>alert('Fichier enregistré !')</script>", "CreateDoc.aspx"));
+                ClientScript.RegisterStartupScript(this.GetType(), "newWindow", String.Format("<script>alert('tttt !')</script>", "CreateDoc.aspx"));
+                Console.Write(path);
+                SqlConnection thisConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString);
+                SqlConnection thisConnection2 = new SqlConnection(ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString);
 
-                SqlConnection thisConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString4"].ConnectionString);
-        //Create Command object
+                //Create Command object
 
         SqlCommand nonqueryCommand = thisConnection.CreateCommand();
         try
@@ -58,11 +61,25 @@ namespace ProjetCSharp.Account
             // Open Connection
             thisConnection.Open();
            // Create INSERT statement with named parameters
-            nonqueryCommand.CommandText = "INSERT  INTO aspnet_Document (DocumentName) VALUES (@DocName)";
+            nonqueryCommand.CommandText = "INSERT  INTO vw_aspnet_Document (DocumentName,ApplicationId,DocumentId,DocumentPath) VALUES (@DocName, '3a2df03b-ca95-4a39-b0a4-e41c6b963edf',NEWID(),@DocPath );";
             // Add Parameters to Command Parameters collection
-            nonqueryCommand.Parameters.Add("@DocName", SqlDbType.VarChar, 10);
-            nonqueryCommand.Parameters["@DocName"].Value = path;
+            nonqueryCommand.Parameters.Add("@DocName", SqlDbType.VarChar, 50);
+            nonqueryCommand.Parameters.Add("@DocPath", SqlDbType.VarChar, 150);
+            nonqueryCommand.Parameters["@DocName"].Value = TextBox1.Text;
+            nonqueryCommand.Parameters["@DocPath"].Value = path;
             nonqueryCommand.ExecuteNonQuery();
+            Console.Write(path);
+            
+            SqlCommand nonqueryCommand2 = thisConnection2.CreateCommand();
+            thisConnection2.Open();
+            // Create INSERT statement with named parameters
+            nonqueryCommand2.CommandText = "INSERT INTO vw_aspnet_DocumentInUsers(DocumentId, UsersId) VALUES((SELECT DocumentID FROM vw_aspnet_Document WHERE vw_aspnet_Document.DocumentName=@DocName), (SELECT UserId FROM vw_aspnet_Users WHERE vw_aspnet_Users.UserName=@UserName))";
+            // Add Parameters to Command Parameters collection
+            nonqueryCommand2.Parameters.Add("@DocName", SqlDbType.VarChar, 50);
+            nonqueryCommand2.Parameters.Add("@UserName", SqlDbType.VarChar, 50);
+            nonqueryCommand2.Parameters["@DocName"].Value = TextBox1.Text;
+            nonqueryCommand2.Parameters["@UserName"].Value = User.Identity.Name;
+            nonqueryCommand2.ExecuteNonQuery();
         }
         catch (SqlException ex)
         {
@@ -73,6 +90,7 @@ namespace ProjetCSharp.Account
         {
             // Close Connection
             thisConnection.Close();
+            thisConnection2.Close();
         }
             }
             else

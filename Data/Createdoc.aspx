@@ -34,7 +34,4 @@ width: 100%;
     <asp:Button ID="Button2" runat="server" onclick="Button2_Click" 
         Text="Enregistrer" />
     <br />
-    <br />
-
-
 </asp:Content>

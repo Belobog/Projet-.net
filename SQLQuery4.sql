@@ -1,0 +1,1 @@
+﻿SELECT distinct aspnet_Document.DocumentName FROM aspnet_Document CROSS JOIN aspnet_DocumentInUsers CROSS JOIN aspnet_Users WHERE (aspnet_Users.UserName = 'Victor')

@@ -1,0 +1,1 @@
+﻿INSERT  INTO aspnet_Document (DocumentName,ApplicationId,DocumentId,DocumentPath) VALUES ('test', NEWID(),NEWID(),'test' );
