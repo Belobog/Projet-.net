@@ -11,7 +11,9 @@ namespace ProjetCSharp.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            String path = Request.QueryString["docname"] + ".html";
+            
+             Response.Redirect(path);
         }
     }
 }

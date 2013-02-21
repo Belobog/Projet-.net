@@ -13,7 +13,7 @@
                     <asp:RoleGroup Roles="Eleve">
                         <ContentTemplate>
                             <ul>
-                                <li>[ <a href="~/Data/Createcom.aspx" ID="l1" runat="server">Créer un commentaire</a> ]</li>
+                                <li>[ <a href="~/Data/Createcom.aspx" ID="l1" runat="server">Visualiser un document</a> ]</li>
                                 <li>[ <a href="~/Data/Modifycom.aspx" ID="l2" runat="server">Modifier un commentaire</a> ]</li>
                             </ul>
                         </ContentTemplate>

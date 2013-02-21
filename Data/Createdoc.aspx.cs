@@ -13,8 +13,30 @@ namespace ProjetCSharp.Account
 {
     public partial class Createdoc : System.Web.UI.Page
     {
+        protected void Page_Init(object sender, EventArgs e)
+        {
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (TextBox1.Text=="")
+            {
+ 
+                String path = Server.MapPath("./") + Request.QueryString["docname"] + ".html";
+                TextBox1.Text = Request.QueryString["docname"];
+                try
+                {
+                    StreamReader monStreamReader = new StreamReader(path);
+
+                    MyTextBox.Text = monStreamReader.ReadToEnd();
+                    monStreamReader.Close();
+                }
+                catch (FileNotFoundException e1)
+                {
+                    Response.Write("<script>alert('Nouveau fichier')</script>");
+                }
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -47,9 +69,8 @@ namespace ProjetCSharp.Account
                 StreamWriter monStreamWriter = new StreamWriter(path);
                 monStreamWriter.Write(MyTextBox.Text);
                 monStreamWriter.Close();
-                ClientScript.RegisterStartupScript(this.GetType(), "newWindow", String.Format("<script>alert('Fichier enregistré !')</script>", "CreateDoc.aspx"));
-                ClientScript.RegisterStartupScript(this.GetType(), "newWindow", String.Format("<script>alert('tttt !')</script>", "CreateDoc.aspx"));
-                Console.Write(path);
+ 
+
                 SqlConnection thisConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString);
                 SqlConnection thisConnection2 = new SqlConnection(ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString);
 
@@ -68,7 +89,6 @@ namespace ProjetCSharp.Account
             nonqueryCommand.Parameters["@DocName"].Value = TextBox1.Text;
             nonqueryCommand.Parameters["@DocPath"].Value = path;
             nonqueryCommand.ExecuteNonQuery();
-            Console.Write(path);
             
             SqlCommand nonqueryCommand2 = thisConnection2.CreateCommand();
             thisConnection2.Open();
@@ -91,6 +111,7 @@ namespace ProjetCSharp.Account
             // Close Connection
             thisConnection.Close();
             thisConnection2.Close();
+            Response.Write("<script>alert('Fichier enregistré !')</script>");
         }
             }
             else

@@ -1,1 +1,3 @@
-﻿INSERT  INTO aspnet_Document (DocumentName,ApplicationId,DocumentId,DocumentPath) VALUES ('test', NEWID(),NEWID(),'test' );
+﻿Select * from aspnet_DocumentInUsers
+Select * from aspnet_Document
+Delete from aspnet_DocumentInUsers where DocumentId in (Select DocumentId From aspnet_Document where DocumentName = 'docdeboriss')

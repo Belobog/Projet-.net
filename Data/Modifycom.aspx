@@ -7,11 +7,7 @@
 
     <h2>Modification de commentaire</h2>
     <p>
-        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
-        </asp:DataList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-    </p>
-    <p>&nbsp;</p>
+
 
         
 </asp:Content>

@@ -1,0 +1,1 @@
+﻿INSERT INTO aspnet_Users (ApplicationId,UserId,UserName,LastActivityDate) VALUES ('4994c1f4-b519-48e5-8da1-2126912e4bb5',NEWID(),'Victor','2/8/2013 8:54:44 AM')

@@ -7,13 +7,12 @@
 
     <h2>Modification de document</h2>
     <p>
-        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" OnDeleteCommand="DataList1_DeleteCommand">
+        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
             <ItemTemplate>
-                <asp:Label ID="DocumentNameLabel" runat="server" 
-                    Text='<%# Eval("DocumentName") %>' />
+                <a href='<%# string.Concat("~/Data/Createdoc.aspx?docname=",Eval("DocumentName"))%>' ID="l1" runat="server"><%# Eval("DocumentName") %></a>
                 <br />
 <br />
-                <asp:Button ID="buttondelete" runat="server" CommandName="delete" Text="Supprimer" />
+                <asp:Button ID="button" runat="server" OnClick="suppbutton_Click" Text='<%# string.Concat("Supprimer ",Eval("DocumentName"))%>' />
             </ItemTemplate>
         </asp:DataList>
 
